@@ -2,7 +2,7 @@ import os
 import logging
 import tomli
 import jinja2
-from weasyprint import HTML
+from weasyprint import HTML, CSS
 
 # Get the logger instance
 logger = logging.getLogger(__name__)
@@ -39,7 +39,7 @@ class PyCV:
             output_name = "cv.pdf"
             output_path = os.path.join(self.path_output, output_name)
             logger.info(f"Generating {output_name}...")
-            HTML(string=rendered_html, base_url='.').write_pdf(output_path)
+            HTML(string=rendered_html, base_url='.').write_pdf(output_path, stylesheets=[CSS(self.path_css)])
             logger.info(f"Done! File saved: {output_path}")
 
         else:

@@ -5,39 +5,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>{{ profile.name }}</h1>
-        <div class="subtitle">{{ profile.title }}</div>
-        <div class="contact-info">
-            <span>{{ profile.phone }}</span>
-            <span>{{ profile.email }}</span>
-            <span>{{ profile.website }}</span>
-            <span>{{ profile.location }}</span>
-        </div>
-    </header>
-
     <div class="container">
-        <div class="main-column">
+        <div class="column sidebar">
             <section>
-                <h2>Professional Experience</h2>
-                {% for job in experience %}
-                <div class="job-entry">
-                    <h3>{{ job.role }}</h3>
-                    <div class="job-meta">{{ job.company }} | {{ job.dates }} | {{ job.location }}</div>
-                    <ul>
-                        {% for highlight in job.highlights %}
-                        <li>{{ highlight }}</li>
-                        {% endfor %}
-                    </ul>
+                <h2>Contact</h2>
+                <div class="contact-info">
+                    <div>{{ profile.phone }}</div>
+                    <div>{{ profile.email }}</div>
+                    <div>{{ profile.website }}</div>
+                    <div>{{ profile.location }}</div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                {% for school in education %}
+                <div class="education-block">
+                    <h3>{{ school.degree }}</h3>
+                    <div class="meta">{{ school.school }}</div>
+                    <div class="meta">{{ school.dates }}</div>
                 </div>
                 {% endfor %}
-            </section>
-        </div>
-
-        <div class="side-column">
-            <section>
-                <h2>Summary</h2>
-                <p>{{ profile.summary }}</p>
             </section>
 
             <section>
@@ -48,18 +36,36 @@
                     {% endfor %}
                 </div>
             </section>
+        </div>
+
+        <div class="column main">
+            <div class="header-name">{{ profile.name }}</div>
+            <div class="header-title">{{ profile.title }}</div>
+
+            <div class="summary">
+                {{ profile.summary }}
+            </div>
 
             <section>
-                <h2>Education</h2>
-                {% for school in education %}
-                <div class="edu-entry">
-                    <h3>{{ school.degree }}</h3>
-                    <div class="job-meta">
-                        {{ school.school }}<br>
-                        {{ school.dates }}
+                <h2>Professional Experience</h2>
+                {% for job in experience %}
+                <div class="job-entry">
+                    <div class="job-head">
+                        <div>
+                            <span class="job-title">{{ job.role }}</span>
+                            <br>
+                            <span class="job-company">{{ job.company }}</span>
+                        </div>
+                        <div class="job-dates">
+                            {{ job.dates }} <br> {{ job.location }}
+                        </div>
                     </div>
+                    <ul>
+                        {% for highlight in job.highlights %}
+                        <li>{{ highlight }}</li>
+                        {% endfor %}
+                    </ul>
                 </div>
-                <br>
                 {% endfor %}
             </section>
         </div>
