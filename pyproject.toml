@@ -1,0 +1,11 @@
+[project]
+name = "pycv"
+version = "1.0.0"
+description = "CV build on html/css powered by python"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "jinja2>=3.1",
+    "tomli>=2.4",
+    "weasyprint>=67.0",
+]

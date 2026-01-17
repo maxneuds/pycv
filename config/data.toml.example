@@ -1,0 +1,70 @@
+[profile]
+name = "JASMINE BELL"
+title = "Lead Software Engineer"
+phone = "212-312-7001"
+email = "email@example.com"
+website = "github.io/name-surname"
+location = "Austin, TX"
+summary = "Passionate Software Engineer with 10+ years of experience in developing web applications and backend systems. Skilled at writing clear, concise code that is easy to maintain and troubleshoot."
+
+[[experience]]
+role = "Lead Software Engineer"
+company = "Blackbaud"
+dates = "2021 - Present"
+location = "Austin, TX"
+highlights = [
+    "Spearheaded a $12M software project from design to distribution as a senior software engineer in a 12-people team.",
+    "30% improved query efficiency by designing and fully revising the two largest MySQL databases.",
+    "Coordinated a year-long release of a six-part platform project with marketing, BA, QA, and sales department.",
+    "Successfully converted whole project from python 2 to 3.8.0.",
+    "Automated process to create usage graphs, saving $500,000 / year & increasing accuracy.",
+]
+
+[[experience]]
+role = "Senior Software Engineer"
+company = "Wayfair"
+dates = "2017 - 2021"
+location = "Austin, TX"
+highlights = [
+    "Moved the automation solution into a commercial software ($60k/year).",
+    "Developed a chatbot which helped customer to reduce costs by 240% in their customer service department.",
+    "Designed and developed reusable software components which used in 3 different project with reducing development effort by 50%.",
+    "Re-engineered critical modules within a sprint to rely on a centralized library to optimize performance by 68%.",
+]
+
+[[experience]]
+role = "Software Developer"
+company = "Target"
+dates = "2015 - 2017"
+location = "Austin, TX"
+highlights = [
+    "Delivered configuration management tools to track server settings for performance testing which saved 25% of initial machine setup.",
+    "Helped to increase the accuracy of the reporting systems by 4%.",
+    "Performed root cause analysis for more than 10 issues to identify bugs and rolled out fixes to production within 24 hours.",
+]
+
+[[experience]]
+role = "Junior Software Engineer"
+company = "Redfin"
+dates = "2013 - 2015"
+location = "Austin, TX"
+highlights = [
+    "Fueled additional revenue stream through responsive customer support, generating $18k in new license sales within first three weeks.",
+    "Improved user interfaces by updating menus to be more intuitive, increasing sales by 5%.",
+    "Spearheaded the revamp of tech stack which resulted in 40% decrease in server costs.",
+]
+
+[[education]]
+degree = "Executive MBA, Engineering Management"
+school = "The University of Arizona"
+dates = "2010 - 2011"
+location = "Tucson, AZ"
+
+[[education]]
+degree = "Bachelor of Science, Computer Science"
+school = "North Carolina Wesleyan College"
+dates = "2006 - 2009"
+location = "Rocky Mount, NC"
+
+[skills]
+list = ["Java", "C++", "Python", "Perl", "MySQL", "ASP.NET"]
